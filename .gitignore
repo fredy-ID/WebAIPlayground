@@ -1,0 +1,91 @@
+# Fichiers de configuration spécifiques à l'OS
+.DS_Store # macOS
+Thumbs.db # Windows
+ehthumbs.db # Windows
+Desktop.ini # Windows
+
+# Fichiers et dossiers de cache
+*.log
+*.tmp
+*.bak
+*.swp # Fichiers d'échange Vim
+
+# Dépendances de gestion de paquets (Node.js, PHP, Python, Ruby, etc.)
+# Node.js
+/node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store
+
+# PHP (Composer)
+/vendor/
+composer.lock # Souvent ignoré si vous voulez que les utilisateurs exécutent composer install eux-mêmes
+                # Sinon, incluez-le pour garantir la même version de dépendances pour tous
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Ruby (Bundler)
+/vendor/bundle/
+.bundle/
+
+# Dépendances front-end (si non gérées par un gestionnaire de paquets principal)
+/bower_components/
+
+# Fichiers de build générés automatiquement
+/dist/
+/build/
+/out/
+/public/build/ # Si votre dossier public contient des assets générés
+
+# Fichiers de configuration et d'environnement sensibles
+.env # Fichier d'environnement local (très important !)
+.env.*.local # Variations locales des fichiers .env
+.ftpignore
+.htaccess # Parfois, si local et différent du serveur de production
+config.local.php # Exemple de fichier de config local
+
+# Fichiers spécifiques aux IDE (Environnements de Développement Intégrés)
+.idea/ # PhpStorm, WebStorm, IntelliJ IDEA
+.vscode/ # VS Code (peut être inclus si vous partagez des configurations spécifiques)
+*.iml # IntelliJ IDEA
+.project # Eclipse
+.settings/ # Eclipse
+.classpath # Eclipse
+*.sublime-project # Sublime Text
+*.sublime-lime # Sublime Text
+*.swp # Fichiers de swap de Vim
+
+# Fichiers de compilation et d'artefacts (si vous compilez du Sass/Less, TypeScript, etc.)
+*.css.map
+*.js.map
+
+# Fichiers de bases de données locales (si vous utilisez une base de données locale)
+*.sqlite
+*.sqlite3
+data.db
+*.db
+
+# Fichiers uploadés par l'utilisateur
+/uploads/ # Si votre application permet le téléversement de fichiers
+
+# Fichiers de rapports de tests ou de couverture de code
+/coverage/
+.nyc_output/
+junit.xml
+
+# Fichiers temporaires générés par Docker
+.dockerignore
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Ajoutez ici d'autres fichiers ou dossiers spécifiques à votre projet.
+# Par exemple, si vous utilisez un framework spécifique, vérifiez sa documentation pour des `.gitignore` recommandés.
