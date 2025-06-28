@@ -1,29 +1,190 @@
-h1 {
-    color: blue;
-}
-
-p {
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
+/* ----- Base styles ----- */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #9bb1fa 0%, #ff8989 100%);
+    min-height: 100vh;
+}
+
+/* ----- Navigation bar ----- */
+nav {
+    background: #3b82f6;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #b4c8ff;
+}
+
+/* ----- Header ----- */
+header {
+    text-align: center;
+    padding: 3rem 0 1rem 0;
+}
+
+h1 {
+    color: #2563eb;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+/* ----- Main content area ----- */
 main {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 5px;
+    background: #fff;
+    margin: 2rem 1rem;
+    padding: 2rem 2.5rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(59, 130, 246, 0.07);
 }
 
-.p{
-    color: green;
+/* ----- Headings ----- */
+h2, h3 {
+    color: #1e293b;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ----- Paragraphs ----- */
+.p, #p, p {
+    font-size: 1.1rem;
+    color: #334155;
+    margin-bottom: 1rem;
+}
+
+/* Classe .p = texte vert, gras */
+.p {
+    color: #16a34a;
     font-weight: bold;
 }
 
+/* ID #p = texte rouge, gras */
 #p {
-    color: red;
+    color: #ef4444;
     font-weight: bold;
+}
+
+/* ----- Lists ----- */
+ul, ol {
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+ul li, ol li {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.hidden-on-mobile {
+    display: block;
+}
+/* ----- Container for boxes/cards ----- */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f1f5f9;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.04);
+    gap: 24px;
+    min-height: 180px;
+}
+
+/* ----- Card style ----- */
+.card {
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(135deg, #93c5fd 0%, #bae6fd 100%);
+    border: 2px solid #2563eb;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.13);
+}
+
+/* ----- Box style ----- */
+.box-container {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #fca5a5 0%, #fcd34d 100%);
+    border: 2px solid #ef4444;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.08);
+}
+
+/* ----- Images ----- */
+img {
+    display: block;
+    max-width: 180px;
+    margin: 1.5rem auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+}
+
+/* ----- Footer ----- */
+footer {
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    background: #f1f5f9;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 2rem;
+}
+
+footer h3 {
+    margin-bottom: 0.5rem;
+    color: #2563eb;
+}
+
+footer a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: #ef4444;
+}
+
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+    background: linear-gradient(135deg, #9bb1fa 0%, #9dff89 100%);
+  }
+
+  .hidden-on-mobile {
+    display: none;
+}
+
+  .container {
+    width: 100%;
+    padding: 5px;
+  }
 }
