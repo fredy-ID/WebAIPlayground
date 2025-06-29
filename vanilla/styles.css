@@ -102,6 +102,9 @@ ul li, ol li {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
     margin: 2rem 0;
     padding: 1.5rem;
     background: #f1f5f9;
@@ -138,9 +141,18 @@ ul li, ol li {
 }
 
 /* ----- Images ----- */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #8ea0ad;
+    border-radius: 10px;
+    gap: 1rem;
+}
 img {
     display: block;
     max-width: 180px;
+    height: auto;
     margin: 1.5rem auto;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
